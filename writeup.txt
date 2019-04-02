@@ -1,0 +1,21 @@
+-- Why are you designing solution this way.
+    Intuitively the best method to develop in 3 hours to get maximum performance. Things like tripletnet, learning embeddings
+    require high quality labels, more experimentation with data sampling etc. Treating it as image classification is straight forward
+
+-- What are the aspects you considered when designing this way
+    Size of the dataset, a more generic others category, huge imbalances in the classes, time for experimentation
+
+-- What are the cases your solution covers, why are they important.
+    In the absence of high quality labels, a good way to estimate the performance of a designed solution is to make use of
+    consistently repeated information that's available in the product description. The designed solution achieves about 80% accuracy
+    on these cases, extremely useful to evaluate quality of performance.
+
+-- What are the cases your solution doesn't cover, how to extend
+    Things like cards, footwear and everything else that go under others category, cases with no clear labels. A way to cover these is to re-formulate this as
+    a similarity checking method, where we train the system using images with labels and then check for similarity on the unlabeled ones.
+     Another approach would be to use NLP to get similarty in product description as well.
+
+
+References:
+https://github.com/pytorch/vision
+https://github.com/cs230-stanford/cs230-code-examples/tree/master/pytorch/vision
